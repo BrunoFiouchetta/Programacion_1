@@ -3,8 +3,11 @@ FACULTAD TECNOLOGICA NACIONAL
 _______________
 
 ✨ ESTUDIANTE
+
 Repositorio de la materia programacion 1
+
 Alumno : Bruno Fiouchetta
+
 Comision : M2025-3
 _______________
 📂 DESCRIPCION DEL REPOSITORIO
