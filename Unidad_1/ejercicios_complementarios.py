@@ -62,4 +62,4 @@ nombre_mayus = nombre.upper()
 nombre_minus = nombre_mayus.lower()
 
 #16. Por último, con la variable con el nombre en mayúsculas, aplica un método parecido para que se transforme todo en minúsculas excepto la primera letra. 
-nombre_mayus = nombre_mayus.capitalize()
+nombre_mayus = nombre_mayus.capitalize() 
