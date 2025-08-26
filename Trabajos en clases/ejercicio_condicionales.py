@@ -50,3 +50,4 @@ if dia == "viernes":
         arancelInput = float(input("ingrese el valor del arancel: "))
         totalRecaudado = alumnosInput * arancelInput
         print(f"El total recaudado por los aranceles es: ${totalRecaudado}") 
+        
