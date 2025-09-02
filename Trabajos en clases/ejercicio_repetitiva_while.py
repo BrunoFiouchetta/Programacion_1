@@ -1,0 +1,1 @@
+opciones = {1: "piedra", 2: "papel", 3: "tijera"}
