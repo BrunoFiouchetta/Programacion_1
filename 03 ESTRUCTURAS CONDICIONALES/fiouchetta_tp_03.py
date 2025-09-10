@@ -2,9 +2,20 @@
 #1) Escribir un programa que solicite la edad del usuario. Si el usuario es mayor de 18 años, 
 #deberá mostrar un mensaje en pantalla que diga “Es mayor de edad”.
 
+edad = int(input("ingrese su edad: "))
+
+if edad > 18:
+    print("Es mayor de edad")
 
 #2) Escribir un programa que solicite su nota al usuario. Si la nota es mayor o igual a 6, deberá
 #mostrar por pantalla un mensaje que diga “Aprobado”; en caso contrario deberá mostrar el mensaje “Desaprobado”.
+
+nota = float(input("Ingrese su nota: "))
+
+if nota >= 6:
+    print("Aprobado")
+else:
+    print("Desaprobado")
 
 '''
 3) Escribir un programa que permita ingresar solo números pares. Si el usuario ingresa un
@@ -12,6 +23,12 @@ número par, imprimir por en pantalla el mensaje "Ha ingresado un número par"; 
 contrario, imprimir por pantalla "Por favor, ingrese un número par". Nota: investigar el uso del
 operador de módulo (%) en Python para evaluar si un número es par o impar.
 '''
+num1 = int(input("Ingrese un numero par: "))
+
+if num1 % 2 == 0:
+    print("ha ingresado un numero par")
+else:
+    print("por favor ingrese un numero par")
 
 
 '''
@@ -22,5 +39,13 @@ siguientes categorías pertenece:
 ● Adulto/a joven: mayor o igual que 18 años y menor que 30 años.
 ● Adulto/a: mayor o igual que 30 años.
 '''
+edad = int(input("ingrese su edad: "))
 
-
+if edad < 12:
+    print("Usted es un niño/a.")
+elif edad >= 12 and edad < 18:
+    print("usted es un alolecente.")
+elif edad >= 18 and edad < 30:
+    print("usted es un adulto.")
+else:
+    print("usted es un adulto mayor")
