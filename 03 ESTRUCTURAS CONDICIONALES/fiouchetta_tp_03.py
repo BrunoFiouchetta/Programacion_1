@@ -6,7 +6,7 @@ edad = int(input("ingrese su edad: "))
 
 if edad > 18:
     print("Es mayor de edad")
-
+print()
 #2) Escribir un programa que solicite su nota al usuario. Si la nota es mayor o igual a 6, deberá
 #mostrar por pantalla un mensaje que diga “Aprobado”; en caso contrario deberá mostrar el mensaje “Desaprobado”.
 
@@ -16,7 +16,7 @@ if nota >= 6:
     print("Aprobado")
 else:
     print("Desaprobado")
-
+print()
 """
 3) Escribir un programa que permita ingresar solo números pares. Si el usuario ingresa un
 número par, imprimir por en pantalla el mensaje "Ha ingresado un número par"; en caso
@@ -30,7 +30,7 @@ if num1 % 2 == 0:
     print("ha ingresado un numero par")
 else:
     print("por favor ingrese un numero par")
-
+print()
 """
 4) Escribir un programa que solicite al usuario su edad e imprima por pantalla a cuál de las
 siguientes categorías pertenece:
@@ -50,6 +50,7 @@ elif edad >= 18 and edad < 30:
     print("usted es un adulto.")
 else:
     print("usted es un adulto mayor")
+print()
 
 """
 5) Escribir un programa que permita introducir contraseñas de entre 8 y 14 caracteres
@@ -66,6 +67,7 @@ if len(contra) >= 8 and len(contra) <= 14:
     print("ingreso una contrasena correcta")
 else:
     print("por favor ingrese una contrasena de entre 8 y 14 caracteres")
+print()
 
 #6) Media, mediana y moda de una lista de números aleatorios
 
@@ -86,6 +88,7 @@ print()
 print(f"la media es: {media} ")
 print(f"la mediana es: {mediana} ")
 print(f"la moda es {moda}: ")
+print()
 
 
 """
@@ -102,7 +105,7 @@ if Frase[-1] in vocales:
     print(Frase)
 else:
     print(Frase)
-
+print()
 
 """
 8) Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3
@@ -127,7 +130,7 @@ elif opcion == 3:
     print(Nombre.title())
 else:
     print("opcion incorrecta")
-
+print()
 
 """
 9) Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la
@@ -157,6 +160,7 @@ elif terremoto >= 6 and terremoto < 7:
     print("muy fuerte")
 else:
     print("extremo")
+print()
 
 """
 10)Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes
@@ -174,5 +178,21 @@ if hemisferiio.upper() == "N":
         print("primavera")
     elif (mes == 6 and dia >= 21) or (mes <= 9 and dia <= 20) or (mes < 9):
         print("verano")
+    elif (mes > 12 and dia > 31) or (mes < 1 and dia < 1):
+        print("error, mes o dia incorrecto")
     else:
         print("otoño")
+    
+
+elif hemisferiio.upper() == "S":
+    if (mes == 6 and dia >= 21) or (mes <= 9 and dia <= 20) or (mes < 9):
+        print("invierno")
+    elif (mes == 9 and dia >= 21) or (mes <= 12 and dia <= 20) or (mes < 12):
+        print("primavera")
+    elif (mes == 12 and dia >= 21) or (mes <= 3 and dia <= 20) or (mes < 3):
+        print("verano")
+    elif (mes > 12 and dia > 31) or (mes < 1 and dia < 1):
+        print("error, mes o dia incorrecto")
+    else:
+        print("otoño")
+print()
