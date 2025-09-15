@@ -9,7 +9,11 @@ por las opciones del menú hasta que el usuario elija salir.
 """
 
 
-
+"""
+1.	Ingresar lista de títulos:
+o	Permite al usuario introducir los títulos de los libros en la biblioteca.
+o	Ejemplo: El usuario introduce "1984", "Rebelión en la Granja".
+"""
 
 titulos = []
 ejemplares = []
@@ -30,16 +34,21 @@ while opcion != 10:
     print("9. Ver todos los títulos")
     print("10. Salir")
     
-
+    
     opcion = int(input("Opción: "))
     
     
     if opcion == 1:
-    titulos[]
-    ejemplares[]
+        cantidad = int(input("cuantos títulos va a ingresar? "))
+        for i in range(cantidad):
+            titulo = input(f"ingrese el título {i + 1}: ")
+            titulos += [titulo]
+            ejemplares.append(0)  
 
-    cantidad = int(input("Cuántos títulos va a ingresar? "))
-
-    for i in range(cantidad):
-        titulo = input(f"Título {i+1}: ")
-        
+    elif opcion == 2:
+        if not titulos:
+            print("no hay títulos en el catálogo, ingrese títulos primero.")
+        else:
+            for i in range(len(titulos)):
+                ejemplares_libro = int(input(f"ingrese la cantidad de ejemplares para '{titulos[i]}': "))
+                ejemplares[i] += ejemplares_libro
