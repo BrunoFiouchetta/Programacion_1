@@ -17,22 +17,21 @@ o	Ejemplo: El usuario introduce "1984", "Rebelión en la Granja".
 
 titulos = []
 ejemplares = []
-opcion = 0 
+opcion = -1 
 
 
 
-while opcion != 10:
+while opcion != 0:
     print("\n=== BIBLIOTECA ESCOLAR ===")
     print("1. Ingresar titulos")
     print("2. Ingresar ejemplares")
     print("3. Mostrar catálogo")
     print("4. Consultar título")
-    print("5. Ver agotados")
+    print("5. lista de agotados") #Muestra una lista de todos los títulos que tienen 0 copias disponibles.
     print("6. Agregar titulo")
-    print("7. Ver agotados")
-    print("8. Préstamo/Devolucion")
-    print("9. Ver todos los títulos")
-    print("10. Salir")
+    print("7. prestamo/devolucion")
+    print("8. ver todos los titulos")
+    print("0. salir")
     
     
     opcion = int(input("Opcion: "))
@@ -43,7 +42,7 @@ while opcion != 10:
         for i in range(cantidad):
             titulo = input(f"ingrese el título {i + 1}: ")
             titulos += [titulo]
-            ejemplares.append(0)
+            ejemplares += [0]
 
     elif opcion == 2:
         if not titulos:
@@ -63,16 +62,38 @@ while opcion != 10:
 
     elif opcion == 4:
         if not titulos:
-            print("No hay títulos en el catálogo.")
+            print("No hay títulos en el catalogo.")
         else:
-            titulo_consulta = input("Ingrese el título a consultar: ")
+            titulo_consulta = input("Ingrese el titulo a consultar: ")
             if titulo_consulta in titulos:
                 indice = titulos.index(titulo_consulta)
-                print(f"'{titulo_consulta}' tiene {ejemplares[indice]} ejemplares disponibles.")
+                print(f"{titulo_consulta} tiene {ejemplares[indice]} ejemplares disponibles.")
             else:
-                print(f"'{titulo_consulta}' no está en el catálogo.")
+                print(f"'{titulo_consulta}' no esta en el catalogo.")
+
+    elif opcion == 5:
+        if not titulos:
+            print("no hay titulos en el catalogo.")
+        else:
+            print("libros agotados:")
+            agotados = False
+            for i in range(len(titulos)):
+                if ejemplares[i] == 0:
+                    print(f"- {titulos[i]}")
+                    agotados = True
+            if not agotados:
+                print("No hay libros agotados.")
+
+    elif opcion == 6:
+        nuevo_titulo = input("ingrese el nuevo titulo a agregar: ")
+        if nuevo_titulo in titulos:
+            print(f"{nuevo_titulo} ya esta en el catálogo.")
+        else:
+            titulos += [nuevo_titulo]
+            ejemplares += [0]
+            print(f"{nuevo_titulo} ha sido agregado al catalogo con 0 ejemplares.")
 
 
 
-    elif opcion == 10:
+    elif opcion == 0:
         print("saliendo del programa...")
