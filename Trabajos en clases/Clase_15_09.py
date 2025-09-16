@@ -43,7 +43,7 @@ while opcion != 10:
         for i in range(cantidad):
             titulo = input(f"ingrese el título {i + 1}: ")
             titulos += [titulo]
-            ejemplares.append(0)  
+            ejemplares.append(0)
 
     elif opcion == 2:
         if not titulos:
@@ -61,3 +61,18 @@ while opcion != 10:
             for i in range(len(titulos)):
                 print(f"{titulos[i]}: {ejemplares[i]} ejemplares")
 
+    elif opcion == 4:
+        if not titulos:
+            print("No hay títulos en el catálogo.")
+        else:
+            titulo_consulta = input("Ingrese el título a consultar: ")
+            if titulo_consulta in titulos:
+                indice = titulos.index(titulo_consulta)
+                print(f"'{titulo_consulta}' tiene {ejemplares[indice]} ejemplares disponibles.")
+            else:
+                print(f"'{titulo_consulta}' no está en el catálogo.")
+
+
+
+    elif opcion == 10:
+        print("saliendo del programa...")
