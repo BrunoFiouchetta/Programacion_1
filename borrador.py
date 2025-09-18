@@ -1,14 +1,15 @@
-num1 = int(input("ingrese el primer numero entero: "))
-num2 = int(input("ingrese el segundo numero entero: "))
-suma=0
+import random
 
-if num1 < num2:
-    for n in range(num1 + 1, num2):
-        suma += n
-elif num2 < num1:
-    for n in range(num2+1, num1):
-        suma += n
-else:
-    print("ambos numeros son iguales")
+numero_aleatorio = random.randint(0, 9)
+intentos = 0
+num_usuario = 10
 
-print("la suma de los numeros es:",suma)
+while num_usuario != numero_aleatorio:
+
+    num_usuario = int(input("adivina el numero del 1 al 9: "))
+
+    if num_usuario != numero_aleatorio:
+        intentos = intentos +  1
+
+print("ACERTASTE!")
+print(f"tardaste {intentos+1} intentos en acertar: ")

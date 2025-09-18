@@ -39,5 +39,44 @@ else:
 print("la suma de los numeros es:",suma)
 
 
+"""
+4)	Elabora un programa que permita al usuario ingresar números enteros y los sume en secuencia. 
+El programa debe detenerse y mostrar el total acumulado cuando el usuario ingrese un 0.
+"""
+print("Este programa suma todos los numeros enteros que cargues en el:\n ")
+corte=1
+suma = 0
+
+while corte != 0:
+    num = int(input("ingrese un numero entero: "))
+    suma = suma + num
+    print(f"la suma es {suma}")
+
+
+"""
+5)	Crea un juego en el que el usuario deba adivinar un número aleatorio entre 0 y 9. Al final, el programa debe mostrar cuántos intentos fueron necesarios para acertar el número.
+"""
+
+import random
+
+numero_aleatorio = random.randint(0, 9)
+intentos = 0
+num_usuario = 10
+
+while num_usuario != numero_aleatorio:
+
+    num_usuario = int(input("adivina el numero del 1 al 9: "))
+
+    if num_usuario != numero_aleatorio:
+        intentos = intentos +  1
+
+print("ACERTASTE!")
+print(f"tardaste {intentos+1} intentos en acertar: ")
+
+
+
+
+
+
 
 
