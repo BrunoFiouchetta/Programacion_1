@@ -1,9 +1,5 @@
-lista2 = []
-lista = list(range(1,101))
 
-for i in lista:
-    if i % 4 == 0:
-        lista2.append(i)
+lista = [1, 2, 3, 4, 5]
 
-print("en una lista del 0 al 100; los multiplos de 4 son: ", lista2)
-
+lista_penultimo = lista[3]
+print(lista_penultimo)
