@@ -44,7 +44,7 @@ animales = ["perro", "gato", "conejo", "pez"]
 """
 animales = ["perro", "gato", "conejo", "pez"]
 
-animales[2] = "loro"
+animales[1] = "loro"
 animales[3] = "oso"
 
 print(animales)
@@ -72,4 +72,61 @@ for i in lista:
 print(primeros2[0:2])
 
 
+"""
+7) Reemplazar los dos valores centrales (índices 1 y 2) de la lista “autos” por dos nuevos valores
+cualesquiera.
+autos = ["sedan", "polo", "suran", "gol"]
+"""
+autos = ["sedan", "polo", "suran", "gol"]
+autos[1] = "motomel"
+autos[2] = "zanella"
+
+print(autos)
+
+
+"""
+8) Crear una lista vacía llamada "dobles" y agregar el doble de 5, 10 y 15 usando append
+directamente. Imprimir la lista resultante por pantalla.
+"""
+
+dobles = [5,10,15]
+resultado = []
+
+for i in dobles:
+    resultado.append(i*2)
+
+print(resultado)
+
+"""
+9) Dada la lista “compras”, cuyos elementos representan los productos comprados por
+diferentes clientes:
+compras = [["pan", "leche"], ["arroz", "fideos", "salsa"],
+["agua"]]
+a) Agregar "jugo" a la lista del tercer cliente usando append.
+b) Reemplazar "fideos" por "tallarines" en la lista del segundo cliente.
+c) Eliminar "pan" de la lista del primer cliente.
+d) Imprimir la lista resultante por pantalla
+"""
+compras = [["pan", "leche"], ["arroz", "fideos", "salsa"], ["agua"]]
+
+compras[2].append("jugo")
+compras[1][1] = "tallarines"
+compras[0].remove("pan")
+
+print(compras)
+
+
+"""
+10) Elaborar una lista anidada llamada “lista_anidada” que contenga los siguientes elementos:
+● Posición lista_anidada[0]: 15
+● Posición lista_anidada[1]: True
+● Posición lista_anidada[2][0]: 25.5
+● Posición lista_anidada[2][1]: 57.9
+● Posición lista_anidada[2][2]: 30.6
+● Posición lista_anidada[3]: False
+Imprimir la lista resultante por pantalla
+"""
+
+lista_anidada = [15, True,[25.5, 57.9, 30.6], False]
+print(lista_anidada)
 
