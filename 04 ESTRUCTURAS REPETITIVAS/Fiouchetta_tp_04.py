@@ -158,6 +158,3 @@ if num_usuario.isdigit():
     print(f"Su numero invertido es: {num_inverso}")
 else:
     print("No ingreso un valor numerico. ")
-
-
-

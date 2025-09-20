@@ -1,8 +1,9 @@
-num_usuario = (input("ingrese un numero entero: "))
+lista2 = []
+lista = list(range(1,101))
 
-if num_usuario.isdigit():
-    num_inverso = num_usuario[::-1]
-    print(f"Su numero invertido es: {num_inverso}")
-else:
-    print("No ingreso un valor numerico. ")
+for i in lista:
+    if i % 4 == 0:
+        lista2.append(i)
+
+print("en una lista del 0 al 100; los multiplos de 4 son: ", lista2)
 
